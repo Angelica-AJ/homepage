@@ -1,0 +1,17 @@
+body {
+    background: url(minecraft-red.gif) no-repeat center fixed;
+    background-size: cover;}
+
+h1 {font-family: "Lucida Console", Monaco, monospace;
+    font-size: 25px;
+    letter-spacing: 3px;
+    word-spacing: 1px;
+    color: maroon;
+    font-weight: 700;
+    text-decoration: underline solid maroon;
+    font-style: italic;
+    font-variant: normal;
+    text-transform: lowercase;
+    background-color:rgb(244, 162, 162);
+    border: 12px double maroon;
+    border-radius: 25px;}
