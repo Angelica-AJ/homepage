@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Specificity</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* embeded styles are more specific than external styles, but less specific than inline styles */
+        div {
+            background:lightgreen;
+        }
+    </style>
+</head>
+
+<!--inline style are the most specific application-->
+<body>
+   <div style="background:lightpink;">Application Specificity</div>
+
+   <main class="class" id="id" style="background:lightseagreen;">Identifier Specificity</main>
+
+<footer>Location Specficity</footer>
+
+</body>
+
+</html>

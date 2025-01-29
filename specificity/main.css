@@ -1,0 +1,45 @@
+body {background-color:lightblue;}
+
+
+
+img {
+    max-width:100%;
+}
+
+/* external styles are the least specific application */
+div {
+    margin:20px;
+    background:whitesmoke;
+    padding:10px;
+    text-align: center;
+}
+
+/* default tags are the least specific */
+main{
+     margin:20px;
+    background:violet;
+    padding:10px;
+    text-align: center;
+}
+
+/* classes are more specific than default tagss, but less specific than ids */
+.class{
+    background:lightgreen;
+}
+
+/* ids are the most specific */
+#id{
+    background:yellow;
+}
+
+footer {
+    margin: 20px;
+    background: greenyellow;
+    padding:10px;
+    text-align:center;
+}
+
+/* styles declared lower in the css document are more specific */
+footer {
+    background:darkorange;
+}
