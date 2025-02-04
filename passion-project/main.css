@@ -3,7 +3,7 @@ body {
     background-size: cover;}
 
 h1 {font-family: "Lucida Console", Monaco, monospace;
-    font-size: 25px;
+    font-size: 40px;
     letter-spacing: 3px;
     word-spacing: 1px;
     color: maroon;
@@ -17,7 +17,7 @@ h1 {font-family: "Lucida Console", Monaco, monospace;
     border-radius: 25px;}
 
 p {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-size: 15px;
+    font-size: 20px;
     letter-spacing: 5px;
     word-spacing: 0px;
     color: maroon;
@@ -30,4 +30,8 @@ p {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     border: 6px double maroon;
     border-radius: 25px;
     padding: 25px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 50px;
+    
 }
