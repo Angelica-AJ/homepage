@@ -32,6 +32,39 @@ p {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     padding: 25px;
     margin-left: 300px;
     margin-right: 300px;
-    margin-top: 50px;
-    
-}
+    margin-top: 50px;}
+
+details {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    word-spacing: 0px;
+    color: maroon;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    background-color:rgb(244, 162, 162);
+    border: 6px double maroon;
+    border-radius: 25px;
+    padding: 25px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 50px;}
+
+ul{font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    word-spacing: 0px;
+    color: maroon;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    background-color:rgb(244, 162, 162);}
+
+img { display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%}
