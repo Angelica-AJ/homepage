@@ -1,0 +1,59 @@
+body {
+    background: url(nether.gif) no-repeat center fixed;
+    background-size: cover;}
+
+a {font-family: "Lucida Console", Monaco, monospace;
+    font-size: 25px;
+    letter-spacing: 3px;
+    word-spacing: 1px;
+    color: rgb(84, 7, 7);
+    font-weight: 700;
+    text-decoration: underline solid rgb(84, 7, 7);
+    font-style: italic;
+    font-variant: normal;
+    text-transform: lowercase;
+    background-color:rgb(243, 116, 96);
+    border: 5px solid rgb(84, 7, 7);
+    border-radius: 25px;}
+
+    h1 {font-family: "Lucida Console", Monaco, monospace;
+    font-size: 40px;
+    letter-spacing: 3px;
+    word-spacing: 1px;
+    color: rgb(84, 7, 7);
+    font-weight: 700;
+    text-decoration: underline solid rgb(84, 7, 7);
+    font-style: italic;
+    font-variant: normal;
+    text-transform: lowercase;
+    background-color:rgb(243, 116, 96);
+    border: 12px double rgb(84, 7, 7);
+    border-radius: 25px;}
+
+div.gallery {
+    margin: 18px;
+    background-color:rgb(243, 116, 96);
+    border: 12px double rgb(84, 7, 7);
+    float: left;
+    width: 314px;}
+    
+div.gallery img {
+    width: 100%;
+    height: auto;}
+              
+div.desc {
+    padding: 10px;
+    text-align: center;}
+
+.moving{
+        background-color:rgb(243, 116, 96);
+        font-size:20px;
+        font-family: georgia;
+        font-style:italic;
+        font-weight:bold;
+        color:rgb(84, 7, 7);
+        text-shadow: 2px 2px 8px #f0d4d4;
+        position: static; 
+        bottom: 10px; 
+        width: 100%; 
+        padding: 10px;}

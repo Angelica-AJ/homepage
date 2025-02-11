@@ -2,6 +2,25 @@ body {
     background: url(minecraft-red.gif) no-repeat center fixed;
     background-size: cover;}
 
+a {font-family: "Lucida Console", Monaco, monospace;
+    font-size: 25px;
+    letter-spacing: 3px;
+    word-spacing: 1px;
+    color: maroon;
+    font-weight: 700;
+    text-decoration: underline solid maroon;
+    font-style: italic;
+    font-variant: normal;
+    text-transform: lowercase;
+    background-color:rgb(244, 162, 162);
+    border: 5px solid maroon;
+    border-radius: 25px;}
+
+
+audio {display: block;
+    margin-left: auto;
+    margin-right: auto;}
+
 h1 {font-family: "Lucida Console", Monaco, monospace;
     font-size: 40px;
     letter-spacing: 3px;
@@ -57,14 +76,21 @@ ul{font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     letter-spacing: 5px;
     word-spacing: 0px;
     color: maroon;
-    font-weight: normal;
+    font-weight: bolder;
     text-decoration: none;
     font-style: normal;
     font-variant: small-caps;
     text-transform: none;
     background-color:rgb(244, 162, 162);}
 
-img { display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%}
+#heartgif {display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;}
+
+#heart {max-width: 200px;
+    height: auto;}
+    
+#heart:hover{
+        transform:scale(2);}
+
