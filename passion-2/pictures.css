@@ -31,6 +31,7 @@ a {font-family: Georgia, serif;
     border-radius: 25px;}
 
 div.gallery {
+    color: rgb(210, 180, 180);
     margin: 18px;
     background-color:rgb(104, 48, 48);
     border: 12px dashed rgb(47, 10, 10);
