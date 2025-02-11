@@ -1,0 +1,96 @@
+body {
+    background: url(sparksbackground.gif) no-repeat center fixed;
+    background-size: cover;}
+
+a {font-family: Georgia, serif;
+    font-size: 25px;
+    letter-spacing: 3px;
+    word-spacing: 1px;
+    color: rgb(247, 203, 203);
+    font-weight: 700;
+    text-decoration: underline solid rgb(247, 203, 203);
+    font-style: italic;
+    font-variant: normal;
+    text-transform: lowercase;
+    background-color:rgb(115, 35, 35);
+    border: 5px dotted rgb(247, 203, 203);
+    border-radius: 25px;}
+
+
+audio {display: block;
+    margin-left: auto;
+    margin-right: auto;}
+
+h1 {font-family: Georgia, serif;
+    font-size: 40px;
+    letter-spacing: 3px;
+    word-spacing: 1px;
+    color: rgb(247, 203, 203);
+    font-weight: 700;
+    text-decoration: underline solid rgb(247, 203, 203);
+    font-style: italic;
+    font-variant: normal;
+    text-transform: lowercase;
+    background-color:rgb(115, 35, 35);
+    border: 12px dotted rgb(247, 203, 203);
+    border-radius: 25px;}
+
+p {font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    word-spacing: 0px;
+    color: rgb(247, 203, 203);
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    background-color:rgb(115, 35, 35);
+    border: 6px dotted rgb(247, 203, 203);
+    border-radius: 25px;
+    padding: 25px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 50px;}
+
+details {font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    word-spacing: 0px;
+    color: rgb(247, 203, 203);
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    background-color:rgb(115, 35, 35);
+    border: 6px dotted rgb(247, 203, 203);
+    border-radius: 25px;
+    padding: 25px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 50px;}
+
+ul{font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    word-spacing: 0px;
+    color: rgb(247, 203, 203);
+    font-weight: bolder;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    background-color:rgb(115, 35, 35);}
+
+#gemgif {display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;}
+
+#gem {max-width: 200px;
+    height: auto;}
+    
+#gem:hover{
+        transform:scale(2);}
+
