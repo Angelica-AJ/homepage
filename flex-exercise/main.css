@@ -1,0 +1,30 @@
+*
+{box-sizing:border-box;
+}
+
+img {
+    max-width:100%;
+}
+
+.main-container{
+    background-color:lightblue;
+    padding:10px;
+    display:flex;
+    flex-direction: column;
+}
+
+.top{
+    background:lightgreen;
+    height: 100px;
+    display: flex;
+}
+
+.top-item{
+    background: azure;
+    width: 100%;
+}
+
+.bottom{
+    background: lightgray;
+    height: 500px;
+}

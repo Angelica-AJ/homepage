@@ -1,0 +1,33 @@
+* {
+    box-sizing:border-box;
+}
+
+img {
+    max-width:100%;
+}
+
+.container {
+    background: lightblue;
+    padding: 10px;
+    height: 600px;
+
+    display:flex;
+    flex-direction: column;
+   flex-wrap: wrap;
+    justify-content: center;
+
+    /*align tiems is used for single line, non-wrapping flexboxes*/
+    /*align-items: center;*/
+
+    /*align content is used for mulit-line wrapping flexboxes*/
+    align-content: center;
+
+    gap: 30px;
+}
+
+.item {
+    background:bisque;
+    padding:10px;
+    border:1px solid;
+    width:200px;
+}
