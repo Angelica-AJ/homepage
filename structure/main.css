@@ -1,0 +1,222 @@
+body {
+    background: url(spacebackground.jpeg) no-repeat center fixed;
+    background-size: cover;
+  }
+
+#sungif {
+    position: absolute;
+    top: -200px;
+    right: 525px;}
+
+#sun {transform:scale(2);}
+
+#sun:hover {transform:scale(2.2);}
+
+
+#mercurygif {
+    position: absolute;
+    top: 600px;
+    right: 150px;}
+
+#mercury {max-width: 300px;
+  height: auto;}
+
+#mercury:hover {transform:scale(1.5);}
+
+#venusgif {
+  position: absolute;
+  top: 1000px;
+  right: 500px;}
+
+#venus {max-width: 450px;
+  height: auto;}
+
+#venus:hover {transform:scale(1.5);}
+
+#earthgif {
+  position: absolute;
+  top: 1700px;
+  right: 500px;}
+
+#earth {max-width: 300px;
+  height: auto;}
+
+#earth:hover {transform:scale(1.5);}
+
+
+#marsgif {
+  position: absolute;
+  top: 2300px;
+  left: 400px;}
+    
+#mars {max-width: 400px;
+  height: auto;}
+
+#mars:hover {transform:scale(1.5)}
+
+#jupitergif {
+  position: absolute;
+  top: 2900px;
+  left: 80px;}
+
+#jupiter {max-width: 800px;
+  height: auto;}
+
+#jupiter:hover {transform:scale(1.5)}
+
+#saturngif {
+  position: absolute;
+  top: 3800px;
+  left: 500px;}
+
+#saturn {max-width: 1000px;
+  height: auto;}
+
+#saturn:hover {transform:scale(1.5)}
+
+#uranusgif {
+	position: absolute;
+	top: 4400px;
+	left: 300px;}
+  
+  #uranus {transform: scale(1.3);}
+  
+  #uranus:hover {transform:scale(2)}
+
+#neptunegif {
+	position: absolute;
+	top: 5000px;
+	left: 1000px;}
+  
+  #neptune {transform: scale(1.4);}
+  
+  #neptune:hover {transform:scale(2)}
+
+#plutogif {
+  position: absolute;
+  top: 5500px;
+  left: 200px;}
+
+#pluto {max-width: 300px;
+  height: auto;}
+
+#pluto:hover {transform:scale(1.5)}
+
+
+pre {color:white;
+text-align: center;
+width: 100%;
+position: relative;}
+
+.flier {
+	pointer-events: none;
+}
+
+.flier > * {
+        animation: fly 50s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+
+
+@keyframes fly {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+	}
+
+	15% {
+		transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+	}
+}
+
+
+
+.flier2 {
+	pointer-events: none;
+}
+
+.flier2 > * {
+        animation: flying 50s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+@keyframes flying {
+
+0%, 98.001% {display: block;
+		transform: translateX(-350%) translateY(90vh) rotateZ(45deg);
+	}
+
+	12% {
+		transform: translateX(200vw) translateY(-50vh) rotateZ(-180deg);
+	}
+
+	22% {
+		transform: translateX(80vw) translateY(120vh) rotateZ(90deg);
+	}
+
+	33% {
+		transform: translateX(-100vw) translateY(-30vh) rotateZ(270deg);
+	}
+
+	45% {
+		transform: translateX(150vw) translateY(10vh) rotateZ(60deg);
+	}
+
+	56% {
+		transform: translateX(-180vw) translateY(200vh) rotateZ(225deg);
+	}
+
+	70% {
+		transform: translateX(50vw) translateY(-100vh) rotateZ(0deg);
+	}
+
+	80% {
+		transform: translateX(-120vw) translateY(80vh) rotateZ(-90deg);
+	}
+
+	90% {
+		transform: translateX(220vw) translateY(150vh) rotateZ(135deg);
+	}
+
+	100% {
+		transform: translateX(30vw) translateY(-70vh) rotateZ(360deg);
+	}
+}

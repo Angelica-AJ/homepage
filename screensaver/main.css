@@ -1,0 +1,90 @@
+*{box-sizing:border-box;}
+
+body{background: black;}
+
+img {
+    max-width:100%;
+    filter:drop-shadow(0px 0px 100px rgb(255, 19, 19));
+    animation: shadowChange 3s infinite alternate;
+  }
+
+ 
+  @keyframes shadowChange {
+    0% {
+        filter: drop-shadow(0px 0px 100px rgb(255, 19, 19));
+    }
+    33% {
+        filter: drop-shadow(0px 0px 100px rgb(255, 132, 17));
+    }
+    66% {
+        filter: drop-shadow(0px 0px 100px rgb(255, 160, 26));
+    }
+    100% {
+        filter: drop-shadow(0px 0px 100px rgb(255, 19, 19));
+    }
+}
+
+.container{
+    margin:90px auto;
+    width: 60px;
+    height: 150px;
+    position:relative;
+    transform-origin:center bottom;
+    animation-name: flicker;
+    animation-duration:2ms;
+    animation-delay:0s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  .flame{
+    bottom:0;
+    position:absolute;
+    border-bottom-right-radius: 60%;
+    border-bottom-left-radius: 60%;
+    border-top-left-radius: 60%;
+    transform:rotate(-45deg) scale(1.6,1.6);
+  }
+  
+  .yellow{
+    left:5px; 
+    width: 50px;
+    height: 50px;
+    background:rgb(255, 200, 0);
+    box-shadow: 0px 0px 9px 4px rgb(255, 200, 0);
+  }
+  
+  .orange{
+    left:0px; 
+    width: 60px;
+    height: 60px;
+    background:rgb(255, 89, 0);
+    box-shadow: 0px 0px 9px 4px rgb(255, 89, 0);
+  }
+  
+  .red{
+    left:-10px;
+    width: 80px;
+    height: 80px;
+    background:rgb(184, 42, 42);
+    box-shadow: 0px 0px 5px 4px rgb(175, 38, 38);
+  }
+  
+  .white{
+    left:15px; 
+    bottom:-4px;
+    width: 30px;
+    height: 30px;
+    background:white;
+    box-shadow: 0px 0px 9px 4px white;
+  }
+  
+  @keyframes flicker{
+    0%   {transform: rotate(-1deg);}
+    20%  {transform: rotate(1deg);}
+    40%  {transform: rotate(-1deg);}
+    60%  {transform: rotate(1deg) scaleY(1.04);}
+    80%  {transform: rotate(-2deg) scaleY(0.92);}
+    100% {transform: rotate(1deg);}
+  }
