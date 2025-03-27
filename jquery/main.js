@@ -19,5 +19,6 @@ $(".reveal-btn").click(
 
  $( ".draggable" ).draggable({
     axis: "x",
-    containment: ".container"
+    containment: ".container",
+    snap: true
  });
