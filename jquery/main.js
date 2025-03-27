@@ -17,4 +17,7 @@ $(".reveal-btn").click(
     }
 );
 
- $( ".draggable" ).draggable();
+ $( ".draggable" ).draggable({
+    axis: "x",
+    containment: ".container"
+ });
