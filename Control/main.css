@@ -1,0 +1,127 @@
+*{box-sizing:border-box;}
+
+img {
+    max-width:100%;
+}
+@font-face {
+    font-family: 'PokemonFont';
+    src: url('Pokemon\ Classic\ copy.ttf');
+}
+body {
+    font-family: 'PokemonFont';
+    text-align: center;
+    background-image: url('lightsky.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff; 
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+audio {
+    position: absolute;
+    bottom: 20px;   
+    left: 50%;       
+    transform: translateX(-50%); 
+    width: 300px;     
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 35px;
+    margin-top: -50px;
+}
+  
+
+h2 { 
+    color: #ffffff;
+    font-size: 25px;
+}
+
+#starters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.pokemon {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.pokemon:hover {
+    border: 2px dashed #ffffff;
+}
+
+.selected {
+    border: 4px dashed #ffffff;
+}
+
+button {
+    font-family: 'PokemonFont';
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: dashed rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:disabled {
+    font-family: 'PokemonFont';
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+#result {
+    font-family: 'PokemonFont';
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+
+#toggle-btn {
+    font-family: 'PokemonFont';
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: dashed rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#typing-effect {
+    font-size: 18px;
+    margin-top: 20px;
+    height: auto; 
+    white-space: nowrap;
+    overflow: hidden;
+    display: none;
+    padding: 20px; 
+    background-color: rgb(255, 255, 255); 
+    text-align: center; 
+    border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAANRJREFUWEftmEsOgCAMRMv9D62JkcSgtR8KAo5bsbwO7QAmmuRJk3DSFXQbFPpgBGjg6qynaK+G43pErejwoBxglDto44uKagN5+0Yb3wwapWSZWAlczrMe6Gs3OtZdiudWVApsZZXihYFG2dUjEBEB1Lr0eTwUzUqgRk8l0ExoplMB9V7P2YhXSdgTFC1qJ/vz/+ypdofqdswbFpSzk1p74hJ21+h0oNHAza7Lw4LWNo21htf/92RVpNV48fTUamJrXIBaFZPG3xSVPvj0fdTVt3kSO8WBcCtXt0jzAAAAAElFTkSuQmCC") 14 /  14px / 0 round;
+    border-width:  14px;
+    border-style:  solid;
+    color: black;
+}

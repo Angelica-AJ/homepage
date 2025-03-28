@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pick your region and starter Pokémon!</title>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Choose Your Region & Starter Pokémon!</h1>
+        
+        <div>
+            <label for="region-select">Select a Region:</label>
+            <select id="region-select">
+                <option value="">--Choose a Region--</option>
+                <option value="kanto">Kanto</option>
+                <option value="johto">Johto</option>
+                <option value="hoenn">Hoenn</option>
+                <option value="sinnoh">Sinnoh</option>
+                <option value="unova">Unova</option>
+                <option value="kalos">Kalos</option>
+                <option value="alola">Alola</option>
+                <option value="galar">Galar</option>
+                <option value="paldea">Paldea</option>
+            </select>
+        </div>
+
+        <div id="starters-container">
+            <h2>Pick Your Starter:</h2>
+            <div id="starters"></div>
+        </div>
+
+        <button id="confirm-btn" disabled>Confirm</button>
+        
+        <p id="typing-effect"></p>
+
+        <p id="result"></p>
+
+        <button id="toggle-btn">Night Mode</button>
+
+        <audio controls autoplay>
+            <source src="Pokemon Ruby_Sapphire_Emerald- Littleroot Town-yt.savetube.me.mp3" type="audio/mpeg" autoplay>
+        </audio> 
+    </div>
+
+    <script>
+        const startersData = {
+            kanto: [
+                { name: "Bulbasaur", img: "bulbasaur.gif" },
+                { name: "Charmander", img: "charmander.gif" },
+                { name: "Squirtle", img: "squirtle.gif" }
+            ],
+            johto: [
+                { name: "Chikorita", img: "chikorita.gif" },
+                { name: "Cyndaquil", img: "cyndaquil.gif" },
+                { name: "Totodile", img: "totodile.gif" }
+            ],
+            hoenn: [
+                { name: "Treecko", img: "treecko.gif" },
+                { name: "Torchic", img: "torchic.gif" },
+                { name: "Mudkip", img: "mudkip.gif" }
+            ],
+            sinnoh: [
+                { name: "Turtwig", img: "turtwig.gif" },
+                { name: "Chimchar", img: "chimchar.gif" },
+                { name: "Piplup", img: "piplup.gif" }
+            ],
+            unova: [
+                { name: "Snivy", img: "snivy.gif" },
+                { name: "Tepig", img: "tepig.gif" },
+                { name: "Oshawott", img: "oshawott.gif" }
+            ],
+            kalos: [
+                { name: "Chespin", img: "chespin.gif" },
+                { name: "Fennekin", img: "fennekin.gif" },
+                { name: "Froakie", img: "froakie.gif" }
+            ],
+            alola: [
+                { name: "Rowlet", img: "rowlet.gif" },
+                { name: "Litten", img: "litten.gif" },
+                { name: "Popplio", img: "popplio.gif" }
+            ],
+            galar: [
+                { name: "Grookey", img: "grookey.gif" },
+                { name: "Scorbunny", img: "scorbunny.gif" },
+                { name: "Sobble", img: "sobble.gif" }
+            ],
+            paldea: [
+                { name: "Sprigatito", img: "sprigatito.png" },
+                { name: "Fuecoco", img: "fuecoco.png" },
+                { name: "Quaxly", img: "quaxly.png" }
+            ]
+        };
+
+        const regionSelect = document.getElementById("region-select");
+        const startersContainer = document.getElementById("starters");
+        const confirmBtn = document.getElementById("confirm-btn");
+        const resultText = document.getElementById("result");
+        const typingEffect = document.getElementById("typing-effect");
+        const toggleBtn = document.getElementById("toggle-btn");
+
+        let selectedStarter = null;
+        let isNightMode = false;
+
+        regionSelect.addEventListener("change", function () {
+            const region = regionSelect.value;
+            startersContainer.innerHTML = ""; 
+            selectedStarter = null; 
+            confirmBtn.disabled = true; 
+            typingEffect.textContent = ""; // Clear previous text
+            resultText.textContent = ""; // Clear previous text
+
+            if (region && startersData[region]) {
+                startersData[region].forEach(pokemon => {
+                    const img = document.createElement("img");
+                    img.src = pokemon.img;
+                    img.alt = pokemon.name;
+                    img.classList.add("pokemon");
+
+                    img.addEventListener("click", function () {
+                        selectStarter(pokemon.name, img);
+                    });
+
+                    startersContainer.appendChild(img);
+                });
+            }
+        });
+
+        function selectStarter(name, imgElement) {
+            selectedStarter = name;
+            confirmBtn.disabled = false;
+
+            document.querySelectorAll(".pokemon").forEach(p => p.classList.remove("selected"));
+
+            imgElement.classList.add("selected");
+        }
+
+        confirmBtn.addEventListener("click", function () {
+            if (selectedStarter) {
+                typeText("typing-effect", `You chose ${selectedStarter} as your starter!`, 50);
+            }
+        });
+
+        toggleBtn.addEventListener("click", function () {
+            if (isNightMode) {
+                document.body.style.backgroundImage = "url('lightsky.jpg')";
+                toggleBtn.textContent = "Night Mode";
+            } else {
+                document.body.style.backgroundImage = "url('darksky.jpg')";
+                toggleBtn.textContent = "Day Mode";
+            }
+            isNightMode = !isNightMode;
+        });
+
+        function typeText(elementId, text, speed = 50) {
+            let i = 0;
+             const element = document.getElementById(elementId);
+    
+        element.style.display = "inline-block"; // Show the box only when typing starts
+        element.textContent = ""; // Clear previous text
+
+        function type() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+
+        type();
+            }
+    </script>
+</body>
+</html>
