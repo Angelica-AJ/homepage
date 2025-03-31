@@ -125,3 +125,19 @@ button:disabled {
     border-style:  solid;
     color: black;
 }
+
+.pokeball-left {
+    position: fixed;
+    left: 100px;  
+    top: 50%;  
+    transform: translateY(-50%);
+    width: 250px; 
+}
+
+.pokeball-right {
+    position: fixed;
+    right: 100px;  
+    top: 50%;  
+    transform: translateY(-50%);
+    width: 250px; 
+}

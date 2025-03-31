@@ -44,6 +44,7 @@
         <audio controls autoplay>
             <source src="Pokemon Ruby_Sapphire_Emerald- Littleroot Town-yt.savetube.me.mp3" type="audio/mpeg" autoplay>
         </audio> 
+
     </div>
 
     <script>
@@ -110,8 +111,8 @@
             startersContainer.innerHTML = ""; 
             selectedStarter = null; 
             confirmBtn.disabled = true; 
-            typingEffect.textContent = ""; // Clear previous text
-            resultText.textContent = ""; // Clear previous text
+            typingEffect.textContent = "";
+            resultText.textContent = ""; 
 
             if (region && startersData[region]) {
                 startersData[region].forEach(pokemon => {
@@ -159,8 +160,8 @@
             let i = 0;
              const element = document.getElementById(elementId);
     
-        element.style.display = "inline-block"; // Show the box only when typing starts
-        element.textContent = ""; // Clear previous text
+        element.style.display = "inline-block";
+        element.textContent = ""; 
 
         function type() {
             if (i < text.length) {
@@ -173,5 +174,10 @@
         type();
             }
     </script>
+
+    <img src="pokeball1.gif" alt="Poké Ball" class="pokeball-left">
+
+    <img src="pokeball2.gif" alt="Poké Ball" class="pokeball-right">
+
 </body>
 </html>
