@@ -57,7 +57,7 @@ body {
     font-weight: bold;
   }
   
-  .hero {
+  .work {
     text-align: center;
     padding: 5rem 1rem;
     background-image: url('media/lace_background.png');
@@ -65,12 +65,12 @@ body {
     color: #b30000;
   }
   
-  .hero h1 {
+  .work h1 {
     font-size: 3rem;
     font-family: 'Caudex', serif;
   }
   
-  .hero p {
+  .work p {
     font-size: 1.25rem;
     margin-top: 0.5rem;
   }
