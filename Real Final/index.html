@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angelica's Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="faviconrose.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <div class="main-content">
+        <div id="thumbnail-gallery" class="scroll-container">
+            <img src="SamLavignePoster.jpg" alt="Posters Only" data-project="postersOnly">
+            <img src="Museumdeer.jpeg" alt="Museum" data-project="museum">
+            <img src="Horrormovieposter.jpeg" alt="Horror" data-project="horrorMovie">
+            <img src="HarrisonBergeron .png" alt="Harrison Bergeron" data-project="bergeron">
+        </div>
+
+        <div id="project-details" style="display:none;"></div>
+    </div>
+
+    <div class="sidebar">
+        <div class="sidebar-top">
+            <h1>Angelica Ayala Jimenez</h1>
+        </div>
+
+        <div class="sidebar-middle">
+            <ul>
+                <li><a href="#" data-project="postersOnly">Posters Only</a></li>
+                <li><a href="#" data-project="museum">Make Up Client: Museum</a></li>
+                <li><a href="#" data-project="horrorMovie">Dream Client: Horror Movie</a></li>
+                <li><a href="#" data-project="bergeron">Harrison Bergeron</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="#" id="about-link">About Me</a><br>
+            <a href="https://drive.google.com/file/d/1Y57AH7_kAI0psapGHBmzsVvZ9gcpV6Sa/view?usp=sharing" target="Resume">Resume</a><br>
+            <a href="mailto:angie.aj03@yahoo.com">Email</a><br>
+            <a href="https://www.instagram.com/aaj._.graphics/" target="Instagram">Instagram</a><br>
+            <a href="https://www.linkedin.com/in/angelica-aj" target="LinkedIn">LinkedIn</a><br>
+        </div>
+    </div>
+
+    <script>
+        const gallery = document.getElementById('thumbnail-gallery');
+        const details = document.getElementById('project-details');
+
+        const projects = {
+            postersOnly: {
+                title: "Posters Only",
+                time: "Fall 2024",
+                description: "Posters Only was a VCU graphic design class that involved creating promotional posters based on briefs provided by real clients for events happening within VCU and the Richmond area.",
+                media: `<img src="SamLavignePoster.jpg" alt="Posters Only">`
+            },
+            museum: {
+                title: "Make Up Client: Museum",
+                time: "Spring 2024",
+                description: "As part of collaborative group work, the dream client wished to promote the grand opening of their museum while showcaseing the natural history of Virginia. Deliverables such as advertisements, merch, a social media page, and banners were made. Angelica was in charge of making ads and banners. The logo design was collaborative.",
+                media: `<img src="Museumdeer.jpeg" alt="Museum">`
+            },
+            horrorMovie: {
+                title: "Dream Client: Horror Movie",
+                time: "Fall 2023",
+                description: "As part of collaborative group work, the dream client was a made-up film studio that wished to promote their psychological slasher horror film, Mind's Edge. Deliverables such as posters, DVDs, and a movie trailer were made. Angelica was in charge of making the final poster with influences from everyone's individual posters and the final trailer.",
+                media: `<img src="Horrormovieposter.jpeg" alt="Horror">`
+            },
+            bergeron: {
+                title: "Harrison Bergeron",
+                time: "Spring 2023",
+                description: "A reimagining of the short story, Harrison Bergeron by Kurt Vonnegut as a national warning alert broadcast combined with performance art. Reminiscent of 80's and 90's broadcasting.",
+                media: `<img src="HarrisonBergeron .png" alt="Harrison Bergeron">`
+            }
+        };
+            
+        const aboutMeContent = `
+            <div>
+                <h2>About Me</h2>
+                <p>Angelica Ayala Jimenez is a graphic designer with a passion for storytelling, experimentation, and cultural symbolism while embracing playfulness and creativity in her design research. Based in Richmond, VA, and Arlington, VA, she is currently getting her bachelor's degree in Graphic Design and minor in Anthropology at Virginia Commonwealth University (VCU).
+                Her work often blends anthropological perspectives with visual design, while also focusing on topics like memory, mortality, and identity.</p>
+                <div class="back-arrow" onclick="goBack()">←</div>
+            </div>
+        `;
+
+        function showProject(projectKey) {
+            const p = projects[projectKey];
+            if (p) {
+                details.innerHTML = `
+                    <div>
+                        <h2>${p.title}</h2>
+                        <p><strong>${p.time}</strong></p>
+                        <p>${p.description}</p>
+                        <div class="media">${p.media}</div>
+                        <div class="back-arrow" onclick="goBack()">←</div>
+                    </div>
+                `;
+                gallery.style.display = 'none';
+                details.style.display = 'block';
+            }
+        }
+
+        gallery.addEventListener('click', (e) => {
+            const projectKey = e.target.dataset.project;
+            if (projectKey) {
+                showProject(projectKey);
+            }
+        });
+
+        document.querySelectorAll('.sidebar a[data-project]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const projectKey = link.dataset.project;
+                showProject(projectKey);
+            });
+        });
+
+        document.getElementById('about-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            details.innerHTML = aboutMeContent;
+            gallery.style.display = 'none';
+            details.style.display = 'block';
+        });
+
+        function goBack() {
+            details.style.display = 'none';
+            gallery.style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
+
